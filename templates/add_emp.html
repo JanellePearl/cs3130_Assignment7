@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Add an Employee</h2>
+<form action="{{ url_for('add_emp') }}" method="post" class="add-entry">
+  <dl>
+    <dt>First Name:
+    <dd><input type="text" size="30" name="user_name">
+    <dt>Last Name:
+    <dd><input type="text" size="30" name="user_last">
+    <dt>Department:
+    <dd><input type="text" size="30" name="user_dep">
+    <dd><input type="submit" value="Submit">
+ </dl>
+</form>
+</ul>
+{% endblock %}
+{% block link %}
+<li><h2><a href="{{ url_for('menu') }}">Go back to Main Menu</a></h2></li>
+{% endblock %}
+

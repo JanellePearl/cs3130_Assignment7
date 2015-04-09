@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Delete an employee</h2>
+<form action="{{ url_for('delete_emp') }}" method="post" class="add-entry">
+  <dl>
+    <dt>Input ID#:
+    <dd><input type="text" size="30" name="user_id">
+    <dd><input type="submit" value="Submit">
+  </dl>
+</form>
+{% endblock %}
+{% block link %}
+<a href="{{ url_for('menu') }}">Go back to Main Menu</a>
+{% endblock %}

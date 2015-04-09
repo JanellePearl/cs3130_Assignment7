@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+ <ul>
+  <li><h3><a href="{{ url_for('add_emp') }}">Add a new employee</a></h3></li>
+  <li><h3><a href="{{ url_for('search_emp') }}">Search for an employee</a></h3></li>
+  <li><h3><a href="{{ url_for('delete_emp') }}">Remove an employee from FMS</a></h3></li>
+  <li><h3><a href="{{ url_for('display_emp') }}">Display entire employee FMS</a></h3></li>
+ </ul>
+{% endblock %}

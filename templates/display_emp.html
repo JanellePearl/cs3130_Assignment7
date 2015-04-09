@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for employees in employees %}
+    <li><h2>ID#: {{ employees.user_id }}</h2>
+    <li><h2>Name: {{ employees.user_name }} {{ employees.user_last }}</h2>
+    <li><h2>Department: {{ employees.user_dep }}</h2>
+  {% else %}
+    <li><em>No entries in the database</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
+{% block link %}
+<a href="{{ url_for('menu') }}">Go back to Main Menu</a>
+{% endblock %}
+
+    
+
+
